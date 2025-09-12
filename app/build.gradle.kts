@@ -60,7 +60,12 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
-    implementation("com.google.dagger:hilt-android:2.51")
-    kapt("com.google.dagger:hilt-compiler:2.51")
-    implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
+    implementation("com.google.dagger:hilt-android:2.57.1")
+    kapt("com.google.dagger:hilt-compiler:2.57.1")
+    implementation("androidx.hilt:hilt-navigation-compose:1.3.0")
+
+    // Import the Firebase BoM
+    implementation(platform("com.google.firebase:firebase-bom:34.2.0"))
+    // Add the dependency for Cloud Storage (KTX is now included in the main module)
+    implementation("com.google.firebase:firebase-storage")
 }
