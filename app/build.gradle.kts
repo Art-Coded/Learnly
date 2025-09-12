@@ -2,6 +2,9 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    id("kotlin-kapt") // REQUIRED for Hilt code generation
+    id("dagger.hilt.android.plugin") // REQUIRED for Hilt to work
+    id("kotlin-parcelize")
 }
 
 android {
