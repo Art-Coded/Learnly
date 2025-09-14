@@ -61,9 +61,16 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
+    implementation(libs.firebase.auth)
+    implementation(libs.androidx.credentials.play.services.auth)
+
+    //dagger hilt
     implementation("com.google.dagger:hilt-android:2.57.1")
     kapt("com.google.dagger:hilt-compiler:2.57.1")
     implementation("androidx.hilt:hilt-navigation-compose:1.3.0")
+
+    implementation(libs.firebase.firestore.ktx)
+    implementation(libs.firebase.firestore.ktx.v24103)
 
     // Import the Firebase BoM
     implementation(platform("com.google.firebase:firebase-bom:34.2.0"))
