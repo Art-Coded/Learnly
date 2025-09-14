@@ -69,4 +69,11 @@ dependencies {
     implementation(platform("com.google.firebase:firebase-bom:34.2.0"))
     // Add the dependency for Cloud Storage (KTX is now included in the main module)
     implementation("com.google.firebase:firebase-storage")
+
+    // Room Database
+    implementation(libs.androidx.room.runtime)
+    kapt(libs.androidx.room.compiler)
+    implementation(libs.androidx.room.ktx)
+
+    implementation(libs.coil.compose) // preload images before navigation to save memory (improves performance from loading images)
 }
